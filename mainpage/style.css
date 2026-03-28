@@ -1,0 +1,70 @@
+/* =================================================================
+ * Datei:    mainpage/style.css
+ * Zweck:    Layout und Styling der Tool-Karten auf der Startseite.
+ *           Die Karten werden per mainpage/app.js dynamisch gerendert.
+ * Basis:    base/style.css (CSS-Variablen, Grid, Header, Footer)
+ * ================================================================= */
+
+
+/* ─── Tool-Karten-Grid ───────────────────────────────────────────── */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    align-self: start;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 1rem;
+}
+
+/* Jede Karte ist ein anklickbarer Link mit Icon */
+main a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 400px;
+    height: 200px;
+    font-size: 22px;
+    text-align: center;
+    overflow-wrap: break-word;
+    text-decoration: none;
+    color: var(--c-primary-dk);
+    background-color: var(--c-surface);
+    border: 2px solid var(--c-primary-dk);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+main a .icon {
+    font-size: 5rem;
+    transition: transform 0.2s ease;
+}
+
+main a:hover {
+    .icon {transform: scale(1.2);}
+}
+
+main a:active {
+    background-color: var(--c-border);
+}
+
+
+/* ─── Responsive: Mobile (≤ 767px) ──────────────────────────────── */
+@media (max-width: 767px) {
+
+  main {
+    gap: 1.5rem;
+    margin: 1rem 0.75rem;
+  }
+
+  /* Karten nehmen volle Breite ein, feste Desktop-Grösse überschreiben */
+  main a {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    padding: 1rem 1.25rem;
+  }
+}
