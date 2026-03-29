@@ -14,7 +14,7 @@
 //   folder — Unterordner relativ zu Einkaufs-Tools/ (null = noch nicht implementiert)
 //   icon   — Emoji-Icon für die Karten-Ansicht
 const TOOLS = [
-  { name: 'Währungsrechner',           folder: 'Währungsrechner', icon: '💰' },
+  { name: 'Artikelinformationen',       folder: 'Artikelinformationen', icon: '💰' },
   { name: 'Tool 2 - in Arbeit',        folder: 'Tool-4',          icon: '⚒️' },
   { name: 'Tool 3 - in Arbeit',        folder: 'Tool-5',          icon: '⚒️' },
 ];
